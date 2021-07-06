@@ -1,7 +1,25 @@
+import { useEffect, useState } from 'react';
 import TodoList from './components/TodoList';
+import useDate from './hooks/useData';
 
 function App() {
-    return <TodoList />;
+    const [counts, setCounts] = useState(0);
+    const date = useDate();
+
+    useEffect(() => {
+        console.log('Effect fired counts');
+
+        return () => {
+            console.log('effect cleared');
+        };
+    }, []);
+
+    return (
+        <>
+            {String(date)}
+            {/* <TodoList /> */}
+        </>
+    );
 }
 
 export default App;

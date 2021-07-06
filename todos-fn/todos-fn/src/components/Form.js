@@ -16,6 +16,13 @@ function Form({ onSave }) {
         onSave(newTodo);
     }
 
+    function resetForm() {
+        setNewTodo({
+            title: '',
+            author: '',
+        });
+    }
+
     return (
         <form onSubmit={submitHandler}>
             <input
@@ -31,6 +38,9 @@ function Form({ onSave }) {
                 onChange={changeHandler}
             />
             <button>Save</button>
+            <button type="button" onClick={resetForm}>
+                Reset
+            </button>
         </form>
     );
 }

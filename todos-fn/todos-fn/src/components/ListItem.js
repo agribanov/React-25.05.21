@@ -10,7 +10,7 @@ function ListItem({ item, onDelete, onToggle }) {
 
     return (
         <li onClick={toggleClickHandler}>
-            {item.title} - {'' + item.isDone}
+            {item.title} - {'' + item.completed}
             <button onClick={deleteClickHandler}>Delete</button>
         </li>
     );
