@@ -1,6 +1,5 @@
 import List from './List';
 import Form from './Form';
-import { useEffect, useState } from 'react';
 import useTodos from '../hooks/useTodos';
 
 function TodoList() {

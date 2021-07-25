@@ -16,8 +16,7 @@ function App() {
 
     return (
         <>
-            {String(date)}
-            {/* <TodoList /> */}
+            <TodoList />
         </>
     );
 }
