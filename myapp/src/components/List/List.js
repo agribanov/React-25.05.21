@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import ListItem from '../ListItem/ListItem';
+import Box from '@material-ui/core/Box';
 
 export function List() {
     const { todos, onToggle, onDelete } = this.props;
 
     return (
-        <div>
+        <Box>
             {todos.map((item) => {
                 return (
                     <ListItem
@@ -16,7 +17,7 @@ export function List() {
                     />
                 );
             })}
-        </div>
+        </Box>
     );
 }
 

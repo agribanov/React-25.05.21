@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import Container from '@material-ui/core/Container';
 import './App.css';
 import Form from './components/Form/Form';
 import List from './components/List/List';
@@ -62,7 +63,7 @@ class App extends Component {
 
     render() {
         return (
-            <>
+            <Container maxWidth="xl">
                 <h3>length: {this.state.todos.length}</h3>
                 {this.state.todos.length > 3 ? (
                     <List
@@ -73,7 +74,7 @@ class App extends Component {
                 ) : (
                     <Form onAdd={this.addTodo} />
                 )}
-            </>
+            </Container>
         );
     }
 }

@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import useLanguage from '../hooks/useLanguage';
 
 function Navigation() {
+    const { language, toggleLanguage } = useLanguage();
+
     return (
         <ul>
             <li>
@@ -14,6 +17,11 @@ function Navigation() {
             </li>
             <li>
                 <NavLink to="/about">About</NavLink>
+            </li>
+            <li>
+                <button onClick={toggleLanguage}>
+                    {language === 'en' ? 'Toggle Language' : 'Переключить язык'}
+                </button>
             </li>
         </ul>
     );
